@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
-#continue, #settings{
+#continue,
+#settings {
     color: rebeccapurple;
+}
+
+.login-body-bg {
+    background: url('/bg1.png');
+    background-repeat: no-repeat;
+    /* No repetir */
+    background-position: calc(50% - 340px) center;
+    /* Centrado */
+    background-size: cover;
+    /* Escalar sin recortar */
+    image-rendering: pixelated;
+    /* Mantener bordes nítidos */
+    image-rendering: crisp-edges;
+    /* Alternativa */
 }

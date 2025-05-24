@@ -1,7 +1,17 @@
 import "nes.css/css/nes.min.css";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Loggin() {
-    console.log("Loggin component loaded");
+    useEffect(() => {
+        // Agregar clase al body cuando se monta el componente
+        document.body.classList.add("login-body-bg");
+
+        // Limpiar cuando se desmonta
+        return () => {
+            document.body.classList.remove("login-body-bg");
+        };
+    }, []);
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="w-full max-w-md mx-auto nes-container is-rounded is-dark with-title is-centered loggin">
@@ -18,9 +28,9 @@ function Loggin() {
                 </div>
 
                 <div className="pt-8 nes-field">
-                    <a href="/#menu">
+                    <Link to="menu">
                         <button type="button" className="w-full sm:w-40 nes-btn">Log in</button>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="pt-4 nes-field">
