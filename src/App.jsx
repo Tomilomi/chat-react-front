@@ -5,6 +5,7 @@ import './App.css'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Chat from './components/chat/Chat.jsx'
 import { AnimatePresence } from 'framer-motion';
+import Profile from './components/profile/Profile.jsx'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Loggin />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/chat" element={<Chat />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </HashRouter>
       </AnimatePresence>

@@ -17,7 +17,7 @@ function Menu() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 50 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
         >
             <div className="min-h-screen flex items-center justify-center px-4">
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:max-w-xl">
@@ -32,7 +32,9 @@ function Menu() {
                             </button>
                         </div>
                     </Link>
-                    <div className="w-full sm:w-1/2">
+
+
+                    <Link to="/profile" className="w-full sm:w-1/2">
                         <div className="nes-field">
                             <button
                                 type="button"
@@ -42,7 +44,8 @@ function Menu() {
                                 Profile Settings
                             </button>
                         </div>
-                    </div>
+                    </Link>
+
                 </div>
             </div>
         </motion.div>
