@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 function Profile() {
     useEffect(() => {
@@ -16,8 +17,8 @@ function Profile() {
             exit={{ opacity: 0, x: 50 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="min-h-screen flex items-center justify-center p-4">
-                <div className="w-full max-w-lg bg-neutral-800 rounded-2xl shadow-lg p-6 space-y-6 text-white">
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="w-full max-w-lg bg-neutral-800 shadow-lg p-6 space-y-6 text-white nes-container is-dark ">
                     <h2 className="text-2xl font-bold">User Profile</h2>
 
                     {/* Avatar */}
@@ -50,18 +51,27 @@ function Profile() {
                                 disabled
                             />
                         </div>
+                    </form>
 
-                        {/* Edit button (non-functional) */}
-                        <div className="flex justify-end pt-4">
+                    {/* Centered buttons */}
+                    <div className="flex justify-center gap-4 pt-4">
+                        <Link to="/chat">
                             <button
                                 type="button"
-                                className="nes-btn is-warning"
-                                disabled
+                                className="nes-btn is-primary"
                             >
-                                Edit Profile
+                                Go to Chat
                             </button>
-                        </div>
-                    </form>
+                        </Link>
+
+                        <button
+                            type="button"
+                            className="nes-btn is-warning"
+                            disabled
+                        >
+                            Edit Profile
+                        </button>
+                    </div>
                 </div>
             </div>
         </motion.div>
