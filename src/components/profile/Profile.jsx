@@ -67,7 +67,7 @@ function Profile() {
                         <button
                             type="button"
                             className="nes-btn is-warning"
-                            disabled
+                            dised
                         >
                             Edit Profile
                         </button>
