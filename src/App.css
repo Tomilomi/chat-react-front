@@ -72,7 +72,7 @@
     background: url('/bg1.png');
     background-repeat: no-repeat;
     /* No repetir */
-    background-position: calc(50% - 340px) center;
+    background-position: calc(50% - 30px) center;
     /* Centrado */
     background-size: cover;
     /* Escalar sin recortar */

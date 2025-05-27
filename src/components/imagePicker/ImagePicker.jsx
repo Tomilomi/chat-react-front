@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 function ImagePicker({ onClose }) {
     return (
         <>
@@ -8,7 +9,11 @@ function ImagePicker({ onClose }) {
             >
 
                 {/* Modal centrado encima del overlay */}
-                <div className="fixed inset-0 flex items-center justify-center z-50 nes-container is-rounded is-dark with-title">
+                <motion.div className="fixed inset-0 flex items-center justify-center z-50 nes-container is-rounded is-dark with-title"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 50 }}
+                    transition={{ duration: 0.3 }}>
                     <div className="max-w-md w-[90%] p-6">
                         <h2 className="text-xl font-bold text-center is-title">Pick your icon</h2>
 
@@ -42,7 +47,7 @@ function ImagePicker({ onClose }) {
                             </button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
 

@@ -20,7 +20,7 @@ function Menu() {
             transition={{ duration: 0.6 }}
         >
             <div className="min-h-screen flex items-center justify-center px-4">
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:max-w-xl">
+                <div className="flex flex-col sm:flex-row gap-12 w-full sm:max-w-xl">
                     <Link to="/chat" className="w-full sm:w-1/2">
                         <div className="nes-field">
                             <button
