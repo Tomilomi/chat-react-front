@@ -1,18 +1,14 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
-
 function Changes({ isEditing }) {
-
-    let classNameForSave = "w-full nes-btn is-disabled";
-    let classNameForExit = "w-full nes-btn is-disabled"
-
+    let classNameForSave = "w-full nes-btn is-disabled ch-btn transition-all duration-300";
+    let classNameForExit = "w-full nes-btn is-disabled transition-all duration-300";
 
     if (isEditing) {
-        classNameForSave = "w-full nes-btn is-success";
-        classNameForExit = "w-full nes-btn is-error";
+        classNameForSave = "w-full nes-btn is-success ch-btn transition-all duration-300 hover:animate-pulse";
+        classNameForExit = "w-full nes-btn is-error ch-btn transition-all duration-300 hover:animate-pulse";
     }
-
 
     useEffect(() => {
         document.body.classList.add("login-body-bg");
@@ -21,12 +17,7 @@ function Changes({ isEditing }) {
         };
     }, []);
 
-
-
-
     return (
-
-
         <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -35,22 +26,22 @@ function Changes({ isEditing }) {
         >
             <>
                 <div className="nes-field">
-                    <button
+                    <motion.button
                         type="button"
                         className={classNameForSave}
                         disabled={!isEditing}
                     >
                         Save Changes
-                    </button>
+                    </motion.button>
                 </div>
                 <div className="nes-field">
-                    <button
+                    <motion.button
                         type="button"
                         className={classNameForExit}
                         disabled={!isEditing}
                     >
                         Exit
-                    </button>
+                    </motion.button>
                 </div>
             </>
         </motion.div>

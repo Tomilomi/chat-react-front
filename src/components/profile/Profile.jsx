@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Changes from './Changes';
 import Pen from './Pen';
 
 function Profile() {
+    const [isAble, setisAble] = useState(false);
+
+
     useEffect(() => {
         document.body.classList.add("login-body-bg");
         return () => {
@@ -31,7 +34,7 @@ function Profile() {
                             alt="Profile"
                             className="w-23 h-23"
                         />
-                        <Pen isEditing={false}/>
+                        <Pen isEditing={isAble}/>
                     </div>
 
 
@@ -60,7 +63,7 @@ function Profile() {
 
                     {/* Centered buttons */}
                     <div className='flex justify-center gap-4 pt-2'>
-                        <Changes isEditing={false} />
+                        <Changes isEditing={isAble} />
                     </div>
                     {/* Navigation buttons */}
                     <div className="flex justify-center gap-4 pt-4">
@@ -76,7 +79,10 @@ function Profile() {
                         <button
                             type="button"
                             className="nes-btn is-warning"
-                            dised
+                            onClick={(e) => {
+                                setisAble(!isAble);
+                                console.log("Edit Profile button clicked");
+                            }}
                         >
                             Edit Profile
                         </button>
