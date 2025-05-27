@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import Changes from './Changes';
+import Pen from './Pen';
 
 function Profile() {
     useEffect(() => {
@@ -9,6 +11,7 @@ function Profile() {
             document.body.classList.remove("login-body-bg");
         };
     }, []);
+    
 
     return (
         <motion.div
@@ -28,7 +31,9 @@ function Profile() {
                             alt="Profile"
                             className="w-23 h-23"
                         />
+                        <Pen isEditing={false}/>
                     </div>
+
 
                     {/* Static form */}
                     <form className="space-y-4">
@@ -54,6 +59,10 @@ function Profile() {
                     </form>
 
                     {/* Centered buttons */}
+                    <div className='flex justify-center gap-4 pt-2'>
+                        <Changes isEditing={false} />
+                    </div>
+                    {/* Navigation buttons */}
                     <div className="flex justify-center gap-4 pt-4">
                         <Link to="/chat">
                             <button
