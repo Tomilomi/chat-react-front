@@ -3,7 +3,7 @@
 /* tailwind.css o styles.css */
 @layer utilities {
   .faster-pulse {
-    animation-duration: 1ms; /* más rápido que el default (1s) */
+    animation-duration: 50ms; /* más rápido que el default (1s) */
   }
 }
 
