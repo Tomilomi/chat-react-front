@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+
 
 function Pen({ isEditing }) {
     let classNameForPen = "w-17 h-17 isEditing hover:animate-pulse";
