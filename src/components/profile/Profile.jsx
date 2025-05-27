@@ -45,18 +45,18 @@ function Profile() {
                             <input
                                 type="text"
                                 className="nes-input is-dark w-full"
-                                value="john_doe"
-                                disabled
+                                placeholder="john_doe"
+                                disabled={!isAble}
                             />
                         </div>
 
                         <div>
                             <label className="block mb-1">Password</label>
                             <input
-                                type="text"
+                                type="password"
                                 className="nes-input is-dark w-full"
-                                value="••••••••••"
-                                disabled
+                                placeholder="••••••••••"
+                                disabled={!isAble}
                             />
                         </div>
                     </form>
