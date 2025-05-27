@@ -2,9 +2,10 @@
 
 /* tailwind.css o styles.css */
 @layer utilities {
-  .faster-pulse {
-    animation-duration: 50ms; /* más rápido que el default (1s) */
-  }
+    .faster-pulse {
+        animation-duration: 50ms;
+        /* más rápido que el default (1s) */
+    }
 }
 
 
@@ -23,6 +24,18 @@
     filter: grayscale(80%);
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 
 
 

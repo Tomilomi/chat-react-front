@@ -3,9 +3,15 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Changes from './Changes';
 import Pen from './Pen';
+import ImagePicker from '../imagePicker/ImagePicker';
+
+
+
 
 function Profile() {
     const [isAble, setisAble] = useState(false);
+    const [showImagePicker, setShowImagePicker] = useState(false);
+
 
 
     useEffect(() => {
@@ -14,9 +20,11 @@ function Profile() {
             document.body.classList.remove("login-body-bg");
         };
     }, []);
-    
+
 
     return (
+
+
         <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -34,7 +42,9 @@ function Profile() {
                             alt="Profile"
                             className="w-23 h-23"
                         />
-                        <Pen isEditing={isAble}/>
+                        <Pen isEditing={isAble}
+                            onClick={() => setShowImagePicker(true)}
+                        />
                     </div>
 
 
@@ -89,6 +99,9 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            {showImagePicker && (
+                <ImagePicker onClose={() => setShowImagePicker(false)} />
+            )}
         </motion.div>
     );
 }
