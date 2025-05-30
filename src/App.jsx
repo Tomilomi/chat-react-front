@@ -7,7 +7,7 @@ import Chat from './components/chat/Chat.jsx'
 import { AnimatePresence } from 'framer-motion';
 import Profile from './components/profile/Profile.jsx'
 import RegisterForm from './components/registerForm/RegisterForm.jsx'
-
+import Error404 from './components/error/Error404.jsx'
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/register" element={<RegisterForm />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </HashRouter>
       </AnimatePresence>
