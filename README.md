@@ -1,12 +1,28 @@
-# React + Vite
+# Chat-React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A retro-style chat interface built with **React**, **TailwindCSS**, and **NES.css**. This is a learning project that focuses on building modular components, styling with utility-first CSS, and creating a fun nostalgic UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Retro design using NES.css 🎮
+- Reusable components (`Chat`, `Message`)
+- Responsive layout with TailwindCSS
+- Profile and menu components (under development)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- TailwindCSS
+- NES.css
+- Vite (for fast development)
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/chat-react.git
+cd chat-react
+npm install
+npm run dev
+```
