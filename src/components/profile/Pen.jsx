@@ -1,19 +1,20 @@
 
 
 function Pen({ isEditing, onClick }) {
-    let classNameForPen = "w-17 h-17 isEditing hover:animate-pulse";
-    if (!isEditing) {
-        classNameForPen = "w-17 h-17 isDisabled";
+
+    let classNameForPen = "w-17 h-17 isDisabled";
+    if (isEditing) {
+        classNameForPen = "w-17 h-17 hover:animate-pulse";
     }
 
     return (
-            <button onClick={onClick} className="relative top-9 right-10">
-                <img
-                    src="/chatIcons/penChat.png"
-                    alt="Profile"
-                    className={classNameForPen}
-                />
-            </button>
+        <button onClick={onClick} className="relative top-9 right-10" disabled={!isEditing}>
+            <img
+                src="/chatIcons/penChat.png"
+                alt="Profile"
+                className={classNameForPen}
+            />
+        </button>
     );
 }
 
