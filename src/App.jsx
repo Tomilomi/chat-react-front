@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Loggin from './components/loggin/Loggin.jsx'
 import Menu from './components/menu/Menu.jsx'
 import './App.css'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route, BrowserRouter } from 'react-router-dom'
 import Chat from './components/chat/Chat.jsx'
 import { AnimatePresence } from 'framer-motion';
 import Profile from './components/profile/Profile.jsx'
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <AnimatePresence mode="wait">
-        <HashRouter>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Loggin />} />
             <Route path="/menu" element={<Menu />} />
@@ -24,7 +24,7 @@ function App() {
             <Route path="/register" element={<RegisterForm />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </AnimatePresence>
     </>
   )
